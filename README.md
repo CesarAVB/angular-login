@@ -1,59 +1,23 @@
-# FrontLogin
+🔑 Angular Login Frontend – Autenticação e Gestão de Acesso  
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.6.
+Este projeto consiste em um frontend desenvolvido em Angular, para a criação de telas de login, gerenciamento de sessão e integração com APIs de autenticação de backend.
 
-## Development server
+⚠️ Atenção: Este projeto foi concebido com propósitos estritamente educacionais e de demonstração. Embora funcional, não é otimizado para ambientes de produção e deve ser utilizado apenas para estudo e compreensão das tecnologias envolvidas. O foco principal é a implementação da autenticação e a arquitetura do frontend.  
 
-To start a local development server, run:
+🎯 Objetivo do Projeto
 
-```bash
-ng serve
-```
+Este projeto foi criado com o intuito de explorar e demonstrar a integração de diversas tecnologias e conceitos, servindo como um estudo de caso prático para:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Implementação de Formulário de Login**: Demonstra a construção de um formulário de login reativo e validado, com foco na experiência do usuário e na segurança dos dados de entrada.
+- **Integração com API de Autenticação**: Ilustra como um frontend Angular pode se comunicar com um backend(API REST) para enviar credenciais, receber tokens de autenticação (como JWT) e gerenciar o estado da sessão do usuário.
+- **Gerenciamento de Estado de Autenticação**: Explora o uso de serviços Angular para armazenar e gerenciar o token de autenticação, o status de login do usuário e outras informações de sessão.
+- **Proteção de Rotas (Route Guards)**: Apresenta a implementação de Guards no Angular para proteger rotas, garantindo que apenas usuários autenticados possam acessar determinadas partes da aplicação.
+- **Tratamento de Erros de Autenticação**: Demonstra como lidar com diferentes cenários de erro durante o processo de login (credenciais inválidas, problemas de conexão, etc.) e fornecer feedback adequado ao usuário.
 
-## Code scaffolding
+📸 Visualização do Projeto  
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Tela de Login:
 
-```bash
-ng generate component component-name
-```
+Uma interface limpa e intuitiva para que os usuários possam inserir suas credenciais e acessar o sistema.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+![Screenshot da tela de login](public/login.png)
