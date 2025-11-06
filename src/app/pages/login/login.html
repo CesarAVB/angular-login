@@ -1,0 +1,94 @@
+<div
+  class="relative w-full h-screen overflow-hidden bg-gradient-to-br from-black via-gray-900 to-orange-950"
+>
+  <canvas #canvas class="absolute inset-0 z-0 w-full h-full"></canvas>
+
+  <div class="relative z-10 flex items-center justify-center min-h-screen px-4">
+    <!-- Card de Login -->
+    <div class="w-full max-w-md bg-white rounded-lg shadow-2xl p-8 relative">
+      <form #loginFrm="ngForm">
+        <!-- Triângulo decorativo no topo -->
+        <div
+          class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-b-[20px] border-b-white"
+        ></div>
+
+        <!-- Logo do Sistema -->
+        <div class="mb-8">
+          <img
+            src="/assets/images/logo_logpbx.png"
+            alt="LogPBX"
+            class="mx-auto h-16 w-auto"
+          />
+        </div>
+
+        <div class="space-y-6">
+          <!-- Username Input -->
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <input
+              type="text"
+              placeholder="seuemail@email.com"
+              name="email"
+              [(ngModel)]="login.email"
+              class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700 placeholder-gray-400 shadow-md"
+            />
+          </div>
+
+          <!-- Password Input -->
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <input
+              type="password"
+              placeholder="••••••••••"
+              name="senha"
+              [(ngModel)]="login.password"
+              class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700 shadow-md"
+            />
+          </div>
+
+          <!-- Login Button -->
+          <button
+            (click)="autenticarUsuario()"
+            class="w-full py-3 bg-orange-400 hover:bg-orange-500 text-white font-bold rounded-md transition duration-200 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 uppercase tracking-wide shadow-lg hover:shadow-xl" >
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="absolute bottom-4 left-4 text-orange-200/70 text-xs z-10">
+    Copyright
+    <a
+      href="https://quemsoueu-six.vercel.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-orange-300/90 hover:text-orange-200 transition"
+    >
+      César Augusto
+    </a>
+  </div>
+
+  <!-- Version -->
+  <div class="absolute bottom-4 right-4 text-orange-200/70 text-xs z-10">v1.0.0 © 2025</div>
+
+  <!-- Componente de Toast para exibir mensagens -->
+  <app-toast></app-toast>
+</div>

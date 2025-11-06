@@ -1,0 +1,40 @@
+<!-- toast.component.html -->
+<div class="fixed top-4 right-4 z-50 space-y-3 max-w-sm w-full pointer-events-none">
+  @for (toast of toasts(); track toast.id) {
+    <div
+      [ngClass]="getToastConfig(toast.type).bgClass"
+      class="text-white p-4 rounded-xl shadow-2xl backdrop-blur-sm transform transition-all duration-300 animate-slide-in-right flex items-start gap-3 relative overflow-hidden pointer-events-auto">
+
+      <!-- Overlay de progresso -->
+      <div class="absolute inset-0 bg-black/20 animate-shrink-width origin-right"></div>
+
+      <!-- Ícone -->
+      <div class="flex-shrink-0 mt-0.5 relative z-10">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            [attr.d]="getToastConfig(toast.type).icon">
+          </path>
+        </svg>
+      </div>
+
+      <!-- Mensagem -->
+      <div class="flex-1 pt-0.5 relative z-10">
+        <p class="font-medium text-sm leading-relaxed">
+          {{ toast.message }}
+        </p>
+      </div>
+
+      <!-- Botão Fechar -->
+      <button
+        (click)="removeToast(toast.id)"
+        class="flex-shrink-0 text-white/80 hover:text-white transition-colors relative z-10">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  }
+</div>

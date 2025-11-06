@@ -1,0 +1,23 @@
+/* login.component.css */
+
+/* Caso não esteja usando Tailwind, aqui estão os estilos equivalentes */
+
+/* Se você estiver usando Tailwind CSS, este arquivo pode ficar vazio
+   pois todos os estilos já estão no HTML usando classes utilitárias */
+
+/* Estilos adicionais personalizados (se necessário) */
+:host {
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Animação suave para o botão */
+button:active {
+  transform: scale(0.98);
+}
+
+/* Garantir que o canvas ocupe todo o espaço */
+canvas {
+  display: block;
+}
