@@ -1,5 +1,5 @@
+// environment.ts
 export const environment = {
-
-    apiLogin : ''
-    
+  production: true,
+  apiUrl: 'https://api-login.cesaravb.com.br/auth/login' 
 };
